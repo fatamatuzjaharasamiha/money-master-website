@@ -20,40 +20,46 @@
         <h1 class="text-5xl text-fuchsia-600 font-bold">Financial Checklist</h1>
     </header>
     <!-- main part -->
-    <main class="w-4/5 mx-auto mt-16">
-        <section class="grid grid-cols-2 gap-16">
+    <main class="w-4/5 mx-auto mt-16 mb-4">
+        <section class="grid grid-cols-2 gap-16 ">
+            <!-- Image -->
             <div>
                 <img src="images/moneyyyypic.jpg" alt="">
             </div>
-            <div class="bg-slate-300 text-center font-bold            ">
-                <h3>Income</h3>
+            <!-- Financial part -->
+            <div class="bg-slate-300 text-center font-bold">
+                <h3 class="mt-4">Income</h3>
                 <div class="mt-6">
-                    <label for="">Income:</label>
-                    <input type="text" class="ml-2">
+                    <label for="income-amount">Income:</label>
+                    <input id="income-amount" type="text" class="ml-2">
                 </div>
                 <h3 class="mt-3">Expenses</h3>
                 <div class="mt-6">
-                    <label for=""> Food: </label>
-                    <input type="text" class="ml-2">
+                    <label for="food-cost"> Food: </label>
+                    <input id="food-cost" type="text" class="ml-2">
                     <br>
-                    <label for=""> Rent: </label>
-                    <input type="text" class="ml-2 mt-2">
+                    <label for="rent-cost"> Rent: </label>
+                    <input id="rent-cost" type="text" class="ml-2 mt-2">
                     <br>
-                    <label for="">Cloth: </label>
-                    <input type="text" class="ml-2 mt-2">
+                    <label for="cloth-cost">Cloth: </label>
+                    <input id="cloth-cost" type="text" class="ml-2 mt-2">
                     <br>
-                    <button id="Calculate-button"
-                        class="bg-fuchsia-500 px-4 rounded py-2 text-white font-medium mt-4">Calculation</button>
+                    <button id="Calculate-btn"
+                        class="bg-gradient-to-r from-violet-500 to-fuchsia-500 px-4 rounded py-2 text-white font-medium mt-6">Calculation</button>
                 </div>
-                <h3 class="mt-2">Total Expanses: <span>00</span></h3>
+                <h3 class="mt-4">Total Expanses: <span>00</span></h3>
                 <h3 class="mt-2">Balance: <span>00</span></h3>
 
                 <div class="ml-16 mt-2">
                     <p class="text-left">Save : <input type="text" class="text-center px-0 rounded py-1">
                         <span class="ml-4"> % </span>
                         <button id="Calculate-button"
-                            class="bg-fuchsia-500 px-4 rounded py-2 text-white font-medium mt-4 ml-4">Save</button>
+                            class="bg-gradient-to-r from-violet-500 to-fuchsia-500 px-4 rounded py-2 text-white font-medium mt-4 ml-4">Save</button>
                     </p>
+                </div>
+                <div>
+                    <h3 class="mt-4">Saving Amount: <span>00</span></h3>
+                    <h3 class="mt-2 mb-4">Remaining Balance: <span>00</span></h3>
                 </div>
 
             </div>
