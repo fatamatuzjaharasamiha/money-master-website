@@ -1,67 +1,42 @@
 //get value from input box
+function getInputValue(input) {
+    const inputValue = document.getElementById(input)
+    const fieldValue = parseFloat(inputValue.value)
+    if (isNaN(fieldValue) || fieldValue < 0) {
+        return alert('Wrong!!!!!Please Enter Valid Amount');
+    }
+    else {
+        return fieldValue;
+    }
+
+}
+function BalanceUpdate() {
+    const income = getInputValue('income-amount');
+    const expenses = getInputValue('food-cost') + getInputValue('rent-cost') + getInputValue('cloth-cost');
+    const totalExpanse = document.getElementById('total').innerText = expenses;
+    const balance = document.getElementById('update-balance').innerText = income - totalExpanse;
+    return balance;
+}
 
 document.getElementById('Calculate-btn').addEventListener('click', function () {
-
-    const incomeAmount = document.getElementById('income-amount')
-    const incomeValue = parseFloat(incomeAmount.value);
-
-    const foodCost = document.getElementById('food-cost');
-    const foodValue = parseFloat(foodCost.value);
-
-    const rentCost = document.getElementById('rent-cost');
-    const rentValue = parseFloat(rentCost.value);
-
-
-    const clothCost = document.getElementById('cloth-cost');
-    const clothValue = parseFloat(clothCost.value);
-
-    if (isNaN(incomeValue) || incomeValue < 0) {
-        alert('Please input valid amount')
-    }
-    if (isNaN(foodValue) || foodValue < 0) {
-        alert('Please input valid cost amount')
-    }
-    if (isNaN(rentValue) || rentValue < 0) {
-        alert('Please input valid cost amount')
-    }
-    if (isNaN(clothValue) || clothValue < 0) {
-        alert('Please input valid cost amount')
-    }
-
-    //total expanses calculation
-
-    const total = document.getElementById('total')
-    let totalExpanse = foodValue + rentValue + clothValue;
-    total.innerText = totalExpanse;
-
-    //Balance Calculation
-
-    const updateBalance = document.getElementById('update-balance');
-    let balance = incomeValue - totalExpanse;
-    updateBalance.innerText = balance;
+    BalanceUpdate();
 
 })
-//Saving part
+
+// //Saving part
 
 document.getElementById('save-button').addEventListener('click', function () {
+    const saveInput = getInputValue('save-input');
+    const income = getInputValue('income-amount');
+    const balance = BalanceUpdate();
+    const saveAmount = (income * saveInput) / 100;
+    if (saveAmount > balance) {
+        alert('Invalid Save Amount.Please Enter Valid amount');
+    }
+    else {
+        const saveBalance = document.getElementById('saving-amount').innerText = saveAmount;
+        const remainingBalance = document.getElementById('remaining').innerText = balance - saveAmount;
+    }
 
-    const saveInput = document.getElementById('save-input');
-    const saveValue = parseFloat(saveInput.value);
-
-    const incomeAmount = document.getElementById('income-amount')
-    const incomeValue = parseFloat(incomeAmount.value);
-
-
-
-    const savingAmount = document.getElementById('saving-amount');
-    const saving = (incomeValue * saveValue) / 100;
-    savingAmount.innerText = saving;
-
-
-    const updateBalance = document.getElementById('update-balance');
-    const balance = updateBalance.innerText;
-    let remainingText = document.getElementById('remaining');
-    let remainingBalance = balance - saving;
-    remainingText.innerText = remainingBalance;
 })
 
