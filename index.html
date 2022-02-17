@@ -21,7 +21,7 @@
     </header>
     <!-- main part -->
     <main class="w-4/5 mx-auto mt-16 mb-4">
-        <section class="grid grid-cols-2 gap-16 ">
+        <section class="grid lg:grid-cols-2 lg:gap-16 sm:grid-cols-1">
             <!-- Image -->
             <div>
                 <img src="images/moneyyyypic.jpg" alt="">
@@ -51,15 +51,16 @@
                 <h3 class="mt-2">Balance: <span id="update-balance">00</span></h3>
 
                 <div class="ml-16 mt-2">
-                    <p class="text-left">Save : <input type="text" class="text-center px-0 rounded py-1">
+                    <p class="text-left">Save : <input id="save-input" type="text"
+                            class="text-center px-0 rounded py-1">
                         <span class="ml-4"> % </span>
                         <button id="save-button"
                             class="bg-gradient-to-r from-violet-500 to-fuchsia-500 px-4 rounded py-2 text-white font-medium mt-4 ml-4">Save</button>
                     </p>
                 </div>
                 <div>
-                    <h3 class="mt-4">Saving Amount: <span>00</span></h3>
-                    <h3 class="mt-2 mb-4">Remaining Balance: <span>00</span></h3>
+                    <h3 class="mt-4">Saving Amount: <span id="saving-amount">00</span></h3>
+                    <h3 class="mt-2 mb-4">Remaining Balance: <span id="remaining">00</span></h3>
                 </div>
 
             </div>
