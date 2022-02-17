@@ -17,14 +17,14 @@ function BalanceUpdate() {
     const balance = document.getElementById('update-balance').innerText = income - totalExpanse;
     return balance;
 }
-
+//click calculate button------------//
 document.getElementById('Calculate-btn').addEventListener('click', function () {
     BalanceUpdate();
 
 })
 
-// //Saving part
-
+//Saving part
+//click Save button------------//
 document.getElementById('save-button').addEventListener('click', function () {
     const saveInput = getInputValue('save-input');
     const income = getInputValue('income-amount');
