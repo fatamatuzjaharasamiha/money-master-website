@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +9,7 @@
     <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!--------- vanila css --------->
+    <!------- vanila css ------->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -36,26 +35,25 @@
                 <h3 class="mt-3">Expenses</h3>
                 <div class="mt-6">
                     <label for="food-cost"> Food: </label>
-                    <input id="food-cost" type="text" class="ml-2">
+                    <input id="food-cost" type="text" class="ml-2 w-25">
                     <br>
                     <label for="rent-cost"> Rent: </label>
-                    <input id="rent-cost" type="text" class="ml-2 mt-2">
+                    <input id="rent-cost" type="text" class="ml-2 mt-2 w-25">
                     <br>
                     <label for="cloth-cost">Cloth: </label>
-                    <input id="cloth-cost" type="text" class="ml-2 mt-2">
+                    <input id="cloth-cost" type="text" class="ml-2 mt-2 w-25">
                     <br>
                     <button id="Calculate-btn"
                         class="bg-gradient-to-r from-violet-500 to-fuchsia-500 px-4 rounded py-2 text-white font-medium mt-6">Calculation</button>
                 </div>
                 <h3 class="mt-4">Total Expanses: <span id="total">00</span></h3>
-                <h3 class="mt-2">Balance: <span id="update-balance">00</span></h3>
-
+                <h3 class="mt-2">Balance : <span id="update-balance">00</span></h3>
                 <div class="ml-16 mt-2">
                     <p class="text-left">Save : <input id="save-input" type="text"
-                            class="text-center px-0 rounded py-1">
+                            class="text-center px-0 rounded py-1 w-25">
                         <span class="ml-4"> % </span>
                         <button id="save-button"
-                            class="bg-gradient-to-r from-violet-500 to-fuchsia-500 px-4 rounded py-2 text-white font-medium mt-4 ml-4">Save</button>
+                            class="bg-gradient-to-r from-violet-500 to-fuchsia-500 px-4 rounded py-2 text-white font-medium mt-4 ml-4 w-20">Save</button>
                     </p>
                 </div>
                 <div>
@@ -68,7 +66,8 @@
     </main>
 
     <!-------Vanila javascript------>
-    <script src="script/app.js"></script>
+    <!-- <script src="script/app.js"></script> -->
+    <script src="script/functional.js"></script>
 </body>
 
 </html>
